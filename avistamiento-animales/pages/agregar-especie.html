@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Especie — AVISTAMIENTO</title>
+  <meta name="description" content="Formulario para registrar una nueva especie de animal en el catálogo.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="top-notice">
+    <div class="container top-notice-inner">
+      <span>NUEVO REGISTRO — AGREGA UNA ESPECIE AL CATÁLOGO</span>
+      <span id="nombre-usuario"></span>
+    </div>
+  </aside>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="nav-brand">
+        <span>AVISTAMIENTO</span>
+        <span class="nav-brand-badge">FAUNA</span>
+      </a>
+
+      <nav aria-label="Navegación del sitio">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Iniciar Sesión</a></li>
+          <li><a href="catalogo.html" class="nav-link">Explorar Especies</a></li>
+          <li><a href="agregar-especie.html" class="nav-link highlight active">+ Registrar Especie</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container panel-wrapper">
+
+      <div class="form-panel-wide b-card">
+
+        <div class="card-header">
+          <span class="tag tag-accent">NUEVO REGISTRO</span>
+          <span class="mono">FORMULARIO</span>
+        </div>
+
+        <div class="card-body" style="padding: clamp(1.5rem, 3.5vw, 2.5rem);">
+
+          <div class="form-header-area">
+            <span class="mono" style="font-size: 0.8rem; color: var(--color-text-muted);">CATÁLOGO DE ESPECIES</span>
+            <h1>Registrar una Nueva Especie</h1>
+            <p style="margin-top: 0.25rem;">
+              Completa los datos del animal para incorporarlo al catálogo. La fecha de registro se guarda
+              automáticamente con el día de hoy.
+            </p>
+          </div>
+
+          <div class="callout-box">
+            <span class="mono">NOTA:</span>
+            <div>
+              El nombre de cada especie debe ser único. Los campos marcados con * son obligatorios.
+            </div>
+          </div>
+
+          <form>
+
+            <div class="form-group">
+              <label for="nombre-especie" class="form-label">Nombre de la especie *</label>
+              <input type="text" id="nombre-especie" name="nombre-especie" class="form-input" maxlength="50"
+                placeholder="Ej: Leon">
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="tipo" class="form-label">Tipo de animal *</label>
+                <select id="tipo" name="tipo" class="form-input">
+                  <option value="">Selecciona un tipo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="alimentacion" class="form-label">Alimentación *</label>
+                <select id="alimentacion" name="alimentacion" class="form-input">
+                  <option value="">Selecciona la alimentación</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="estado" class="form-label">Estado de conservación *</label>
+              <select id="estado" name="estado" class="form-input">
+                <option value="">Selecciona un estado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <span class="form-label">Hábitats donde vive</span>
+              <div class="check-grid" id="lista-habitats"></div>
+            </div>
+
+            <div class="form-group">
+              <span class="form-label">Características</span>
+              <div class="check-grid" id="lista-caracteristicas"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="observaciones" class="form-label">Observaciones</label>
+              <textarea id="observaciones" name="observaciones" class="form-input" rows="3" maxlength="70"
+                placeholder="Máximo 70 caracteres"></textarea>
+              <span class="form-hint">Opcional · máximo 70 caracteres</span>
+            </div>
+
+            <div class="form-actions">
+              <button id="btn-registrar-especie" type="button" class="btn btn-primary"
+                style="flex: 1; padding: 0.95rem;">
+                Registrar Especie en el Catálogo
+              </button>
+              <a href="catalogo.html" class="btn" style="background-color: var(--color-surface-muted);">
+                Descartar
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>AVISTAMIENTO</h4>
+          <p>
+            Catálogo de especies de animales con su tipo, alimentación, hábitat, características y estado de
+            conservación.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>NAVEGACIÓN</h4>
+          <ul class="footer-links">
+            <li><a href="catalogo.html" class="footer-link">Explorar Especies</a></li>
+            <li><a href="agregar-especie.html" class="footer-link">Registrar una Especie</a></li>
+            <li><a href="../index.html" class="footer-link">Iniciar Sesión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>LOS DATOS</h4>
+          <p>
+            Basado en la base de datos AvistamientoDeAnimales: tipos de animal, alimentación, hábitats,
+            características y estados de conservación.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AVISTAMIENTO. PROYECTO ACADÉMICO.</span>
+        <span>FORMULARIO DE REGISTRO</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="../js/especies-controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión — AVISTAMIENTO</title>
+  <meta name="description"
+    content="Acceso a la plataforma AVISTAMIENTO. Inicia sesión para consultar y registrar especies de animales.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <aside class="top-notice">
+    <div class="container top-notice-inner">
+      <span>REGISTRO DE AVISTAMIENTO DE ANIMALES</span>
+      <span>FAUNA 2026</span>
+    </div>
+  </aside>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="nav-brand">
+        <span>AVISTAMIENTO</span>
+        <span class="nav-brand-badge">FAUNA</span>
+      </a>
+
+      <nav aria-label="Navegación del sitio">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Iniciar Sesión</a></li>
+          <li><a href="pages/catalogo.html" class="nav-link">Explorar Especies</a></li>
+          <li><a href="pages/agregar-especie.html" class="nav-link highlight">+ Registrar Especie</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container panel-wrapper">
+
+      <div class="form-panel b-card">
+
+        <div class="card-header">
+          <span class="tag tag-accent">ACCESO PRINCIPAL</span>
+          <span class="mono">MI CUENTA</span>
+        </div>
+
+        <div class="card-body" style="padding: clamp(1.5rem, 3vw, 2.5rem);">
+
+          <div class="form-header-area">
+            <span class="mono" style="font-size: 0.8rem; color: var(--color-text-muted);">BIENVENIDO DE NUEVO</span>
+            <h1>Iniciar Sesión</h1>
+            <p style="margin-top: 0.25rem;">
+              Ingresa tus credenciales para consultar el catálogo de especies y registrar nuevos avistamientos.
+            </p>
+          </div>
+
+          <div class="demo-box">
+            USUARIOS DE PRUEBA<br>
+            ana@correo.com · 12345<br>
+            luis@correo.com · 12345
+          </div>
+
+          <form>
+
+            <div class="form-group">
+              <label for="correo" class="form-label">Correo Electrónico</label>
+              <input type="email" id="correo" name="correo" class="form-input" placeholder="tu.nombre@ejemplo.com">
+            </div>
+
+            <div class="form-group">
+              <label for="clave" class="form-label">Contraseña</label>
+              <input type="password" id="clave" name="clave" class="form-input" placeholder="••••••••••••">
+            </div>
+
+            <button id="btn-login" type="button" class="btn btn-primary btn-block"
+              style="padding: 0.9rem; margin-top: var(--space-sm);">
+              Iniciar Sesión en AVISTAMIENTO
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>AVISTAMIENTO</h4>
+          <p>
+            Catálogo de especies de animales con su tipo, alimentación, hábitat, características y estado de
+            conservación.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>NAVEGACIÓN</h4>
+          <ul class="footer-links">
+            <li><a href="pages/catalogo.html" class="footer-link">Explorar Especies</a></li>
+            <li><a href="pages/agregar-especie.html" class="footer-link">Registrar una Especie</a></li>
+            <li><a href="index.html" class="footer-link">Iniciar Sesión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>LOS DATOS</h4>
+          <p>
+            Basado en la base de datos AvistamientoDeAnimales: tipos de animal, alimentación, hábitats,
+            características y estados de conservación.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AVISTAMIENTO. PROYECTO ACADÉMICO.</span>
+        <span>ACCESO PRINCIPAL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="./js/auth-controller.js"></script>
+</body>
+
+</html>

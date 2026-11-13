@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Especie — AVISTAMIENTO</title>
+  <meta name="description" content="Ficha completa de una especie: tipo, alimentación, hábitats y características.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <aside class="top-notice">
+    <div class="container top-notice-inner">
+      <span>FICHA TÉCNICA DE LA ESPECIE</span>
+      <span id="nombre-usuario"></span>
+    </div>
+  </aside>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="nav-brand">
+        <span>AVISTAMIENTO</span>
+        <span class="nav-brand-badge">FAUNA</span>
+      </a>
+
+      <nav aria-label="Navegación del sitio">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Iniciar Sesión</a></li>
+          <li><a href="catalogo.html" class="nav-link">Explorar Especies</a></li>
+          <li><a href="agregar-especie.html" class="nav-link highlight">+ Registrar Especie</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <a href="catalogo.html" class="back-link">← Volver al Catálogo Completo</a>
+
+      <section id="detalle" class="detail-grid">
+        <!-- La ficha se genera con js/detalle-controller.js -->
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>AVISTAMIENTO</h4>
+          <p>
+            Catálogo de especies de animales con su tipo, alimentación, hábitat, características y estado de
+            conservación.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>NAVEGACIÓN</h4>
+          <ul class="footer-links">
+            <li><a href="catalogo.html" class="footer-link">Explorar Especies</a></li>
+            <li><a href="agregar-especie.html" class="footer-link">Registrar una Especie</a></li>
+            <li><a href="../index.html" class="footer-link">Iniciar Sesión</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>LOS DATOS</h4>
+          <p>
+            Basado en la base de datos AvistamientoDeAnimales: tipos de animal, alimentación, hábitats,
+            características y estados de conservación.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AVISTAMIENTO. PROYECTO ACADÉMICO.</span>
+        <span>FICHA DE ESPECIE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/detalle-controller.js"></script>
+</body>
+
+</html>
